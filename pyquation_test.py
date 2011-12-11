@@ -52,6 +52,15 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(2) |should| equal_to(13)
         f(3) |should| equal_to(19)
         f(4) |should| equal_to(25)
+        
+    def test_7(self):
+        '''supports many adding b's'''
+        f = 2*x*3 + 3 - 1
+        f(1) |should| equal_to(8)
+        f(2) |should| equal_to(14)
+        f(3) |should| equal_to(20)
+        f(4) |should| equal_to(26)
+    
     
 if __name__ == '__main__':
     unittest.main()

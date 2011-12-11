@@ -20,10 +20,10 @@ class Variable(object):
         return self.__rmul__(n)
         
     def __add__(self, n):
-        return self._clone(self.mul, n)
+        return self._clone(self.mul, self.add + n)
         
     def __sub__(self, n):
-        return self._clone(self.mul, -n)
+        return self._clone(self.mul, self.add - n)
 
 
 variable = Variable()
