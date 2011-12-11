@@ -11,6 +11,9 @@ class Variable(object):
         self.mul = n
         return self
         
+    def __mul__(self, n):
+        return self.__rmul__(n)
+        
     def __add__(self, n):
         self.add = n
         return self

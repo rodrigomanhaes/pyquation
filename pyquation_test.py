@@ -36,7 +36,14 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(2) |should| equal_to(3)
         f(3) |should| equal_to(5)
         f(4) |should| equal_to(7)
-    
+        
+    def test_5(self):
+        '''supports "x*a" form'''
+        f = x*2 - 1
+        f(1) |should| equal_to(1)
+        f(2) |should| equal_to(3)
+        f(3) |should| equal_to(5)
+        f(4) |should| equal_to(7)
     
 if __name__ == '__main__':
     unittest.main()
