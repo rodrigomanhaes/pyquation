@@ -60,6 +60,14 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(2) |should| equal_to(14)
         f(3) |should| equal_to(20)
         f(4) |should| equal_to(26)
+        
+    def test_8(self):
+        '''sums two "a" members'''
+        f = 2*x + 3*x + 1
+        f(1) |should| equal_to(6)
+        f(2) |should| equal_to(11)
+        f(3) |should| equal_to(16)
+        f(4) |should| equal_to(21)
     
     
 if __name__ == '__main__':

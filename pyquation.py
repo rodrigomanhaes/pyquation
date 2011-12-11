@@ -20,7 +20,13 @@ class Variable(object):
         return self.__rmul__(n)
         
     def __add__(self, n):
-        return self._clone(self.mul, self.add + n)
+        mul = self.mul
+        add = self.add
+        if isinstance(n, Variable):
+            mul += n.mul
+        else:
+            add += n
+        return self._clone(mul, add)
         
     def __sub__(self, n):
         return self._clone(self.mul, self.add - n)
