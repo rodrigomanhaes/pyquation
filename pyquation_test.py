@@ -28,6 +28,14 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(2) |should| equal_to(8)
         f(3) |should| equal_to(11)
         f(4) |should| equal_to(14)
+        
+    def test_4(self):
+        '''with negative b'''
+        f = 2*x - 1
+        f(1) |should| equal_to(1)
+        f(2) |should| equal_to(3)
+        f(3) |should| equal_to(5)
+        f(4) |should| equal_to(7)
     
     
 if __name__ == '__main__':

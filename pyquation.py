@@ -14,6 +14,10 @@ class Variable(object):
     def __add__(self, n):
         self.add = n
         return self
+        
+    def __sub__(self, n):
+        self.add = -n
+        return self
 
 
 variable = Variable()
