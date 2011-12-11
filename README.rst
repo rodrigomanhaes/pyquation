@@ -7,10 +7,10 @@ Examples::
 
     >>> from pyquation import variable as x
     
-    >>> f = 2*x
+    >>> f = 2*x + 1
     >>> f(1)
-    2
+    3
     >>> f(2)
-    4
+    5
     >>> f(3)
-    6
+    7
