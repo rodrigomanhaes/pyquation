@@ -68,6 +68,20 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(2) |should| equal_to(11)
         f(3) |should| equal_to(16)
         f(4) |should| equal_to(21)
+        
+    def test_9(self):
+        '''b first'''
+        f = 1 + 2*x
+        f(1) |should| equal_to(3)
+        f(2) |should| equal_to(5)
+        f(3) |should| equal_to(7)
+        f(4) |should| equal_to(9)
+        
+        f = 1 - 2*x
+        f(1) |should| equal_to(-1)
+        f(2) |should| equal_to(-3)
+        f(3) |should| equal_to(-5)
+        f(4) |should| equal_to(-7)
     
     
 if __name__ == '__main__':

@@ -28,8 +28,14 @@ class Variable(object):
             add += n
         return self._clone(mul, add)
         
+    def __radd__(self, n):
+        return self.__add__(n)
+        
     def __sub__(self, n):
         return self._clone(self._a, self._b - n)
+        
+    def __rsub__(self, n):
+        return self._clone(-self._a, self._b + n)
 
 
 variable = Variable()
