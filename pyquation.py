@@ -22,13 +22,13 @@ class Variable(object):
         return self.__rmul__(n)
         
     def __add__(self, n):
-        mul = self._a
-        add = self._b
+        a = self._a
+        b = self._b
         if isinstance(n, Variable):
-            mul += n._a
+            a += n._a
         else: 
-            add += n
-        return self._clone(mul, add)
+            b += n
+        return self._clone(a, b)
         
     def __radd__(self, n):
         return self.__add__(n)
