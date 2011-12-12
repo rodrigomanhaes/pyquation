@@ -1,35 +1,35 @@
 class Variable(object):
 
     def __init__(self):
-        self.mul = 1
-        self.add = 0
+        self._a = 1
+        self._b = 0
         
     def _clone(self, mul, add):
         clone = Variable()
-        clone.mul = mul
-        clone.add = add
+        clone._a = mul
+        clone._b = add
         return clone
     
     def __call__(self, n):
-        return n * self.mul + self.add
+        return n * self._a + self._b
         
     def __rmul__(self, n):
-        return self._clone(self.mul * n, self.add)
+        return self._clone(self._a * n, self._b)
         
     def __mul__(self, n):
         return self.__rmul__(n)
         
     def __add__(self, n):
-        mul = self.mul
-        add = self.add
+        mul = self._a
+        add = self._b
         if isinstance(n, Variable):
-            mul += n.mul
+            mul += n._a
         else:
             add += n
         return self._clone(mul, add)
         
     def __sub__(self, n):
-        return self._clone(self.mul, self.add - n)
+        return self._clone(self._a, self._b - n)
 
 
 variable = Variable()
