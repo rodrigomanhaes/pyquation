@@ -83,7 +83,15 @@ class FirstDegreeEquationTest(unittest.TestCase):
         f(3) |should| equal_to(-5)
         f(4) |should| equal_to(-7)
     
-    
+    def test_10(self):
+        '''b first, within and last'''
+        f = 1 - 2*x - 3 - 3*x + 2
+        f(1) |should| equal_to(-5)
+        f(2) |should| equal_to(-10)
+        f(3) |should| equal_to(-15)
+        f(4) |should| equal_to(-20)
+
+
 if __name__ == '__main__':
     unittest.main()
     
